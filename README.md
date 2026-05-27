@@ -73,5 +73,12 @@ pip install -r requirements.txt
 ```bash
 streamlit run data-app.py
 ```
-
+## 👥 Equipe Desenvolvedora:
+* Breno Caxias
+* Priscila Áquila
+* Mackena Teófilo
+* João Marcos
+* Agmy Lima
+* Igor Cosmo
+* Maria Camily
 
