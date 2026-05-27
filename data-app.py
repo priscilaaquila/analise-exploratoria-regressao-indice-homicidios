@@ -1,7 +1,10 @@
+# Run with: python -m streamlit run .\data-app.py
+
 import streamlit as st
 import pandas as pd
 import plotly.express as px
 from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
 
 st.set_page_config(page_title="Trabalho 01 - Homicídios", layout="wide")
 st.title("Análise e Regressão: Homicídios (UNODC)")
@@ -157,19 +160,19 @@ st.write("---")
 st.header("Predição com Regressão Linear")
 
 homicidios_all_range = df_completo[
-    (df_completo["Indicator"] == "Victims of intentional homicide") &
     (df_completo["Sex"] == "Total") &
     (df_completo["Unit of measurement"] == "Rate per 100,000 population")
 ]
 
-tabela_ano = homicidios_all_range.groupby("Year")["VALUE"].mean().reset_index()
+tabela_ano = homicidios_all_range.groupby("Year")["VALUE"].sum().reset_index()
 
 X = tabela_ano[["Year"]]
 y = tabela_ano["VALUE"]
 
-modelo = LinearRegression()
-modelo.fit(X, y)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=996)
 
+modelo = LinearRegression()
+modelo.fit(X_train, y_train)
 
 # ENTRADA DO UTILIZADOR E RESULTADO
 
