@@ -65,11 +65,7 @@ No Linux/Os:
 python3 -m venv venv
 source venv/bin/activate
 ```
-### 3. Instalar as dependências
-```bash
-pip install -r requirements.txt
-```
-### 4. Executar o App:
+### 3. Executar o App:
 ```bash
 streamlit run data-app.py
 ```
