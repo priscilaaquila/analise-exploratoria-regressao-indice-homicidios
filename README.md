@@ -52,8 +52,7 @@ Siga os passos abaixo para clonar o repositório, instalar as dependências e ro
 ### 1. Clonar o Repositório
 Abra o terminal do seu computador e execute os comandos:
 ```bash
-git clone [https://github.com/priscilaaquila/analise-exploratoria-regressao-indice-homicidios.git](https://github.com/priscilaaquila/analise-exploratoria-regressao-indice-homicidios.git)
-cd analise-exploratoria-regressao-indice-homicidios
+git clone https://github.com/priscilaaquila/analise-exploratoria-regressao-indice-homicidios.git
 ```
 ### 2. Criar e Ativar um Ambiente Virtual
 No Windows:
